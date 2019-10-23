@@ -31,5 +31,7 @@ def health():
 def weight():
     """โปรแกรมเกี่ยวกับน้ำหนัก มวลร่างกาย"""
     urproblem = input("วิธีเพิ่มน้ำหนัก, วิธีบดน้ำหนัก, คำนวนดัชณีมวลกาย (BMI), หากไม่มีจากที่กล่าวมาพิมพ์ (ออก) \
-    \nโปรดระบุ : ")           
+    \nโปรดระบุ : ") 
+    urproblem1 = urproblem.upper()
+    if urproblem1.count("BMI") or urproblem.count("ดัชนี"): #BMI Calculator
 main()
