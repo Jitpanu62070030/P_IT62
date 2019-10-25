@@ -34,4 +34,21 @@ def weight():
     \nโปรดระบุ : ") 
     urproblem1 = urproblem.upper()
     if urproblem1.count("BMI") or urproblem.count("ดัชนี"): #BMI Calculator
+        urweight = float(input("โปรดระบุน้ำหนักของท่าน (กิโลกรัม):"))
+        urheight = float(input("โปรดระบุความสูงของท่าน (เซนติเมตร):"))
+        urgender = input("โปรดระบุเพศของท่าน (ชาย หรือ หญิง):")
+        urgender1 = urgender.lower()
+        if urgender1 == "ชาย" or urgender1 == "หญิง":
+            bmi = urweight/((urheight/100)**2)
+            if bmi < 18.5:
+                print("ผอม")
+            elif bmi >= 18.5 and bmi <= 22.9:
+                print("น้ำหนักปกติ")
+            elif bmi >= 23.00 and bmi <= 24.9:
+                print("น้ำหนักเกิน")
+            elif bmi >= 25.0 and bmi <= 30.0:
+                print("อ้วน")
+            elif bmi > 30.0:
+                print("อ้วนมาก")
+            print("##ค่าดัชนีมวลกายคนเอเชีย")
 main()
