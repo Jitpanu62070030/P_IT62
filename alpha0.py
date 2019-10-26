@@ -51,4 +51,14 @@ def weight():
             elif bmi > 30.0:
                 print("อ้วนมาก")
             print("##ค่าดัชนีมวลกายคนเอเชีย")
+        elif urproblem1.count("เพิ่ม"):
+        print("รับประทานอาหารให้มากกว่าปกติ เน้นอาหารจำพวกโปรตีน ออกกำลังกายประเภท Body Weight เพื่อช่วยสร้างกล้ามเนื้อร่างกาย")
+    elif urproblem1.count("ออก") or urproblem1.count("EXIT"): #ออกจากโปรแกรมน้ำหนัก
+        return main()
+    else:
+        print("โปรดระบุสิ่งที่ท่านต้องการทราบในโปรแกรมเกี่ยวกับน้ำหนัก หากไม่มีหรือไม่ต้องการโปรดพิมพ์ ออก")
+        if urproblem.count("ออก"):
+            return main()
+        else:
+            return weight()
 main()
