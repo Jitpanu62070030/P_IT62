@@ -52,7 +52,7 @@ def weight():
                 print("อ้วนมาก")
             print("##ค่าดัชนีมวลกายคนเอเชีย")
         elif urproblem1.count("เพิ่ม"):
-        print("รับประทานอาหารให้มากกว่าปกติ เน้นอาหารจำพวกโปรตีน ออกกำลังกายประเภท Body Weight เพื่อช่วยสร้างกล้ามเนื้อร่างกาย")
+            print("รับประทานอาหารให้มากกว่าปกติ เน้นอาหารจำพวกโปรตีน ออกกำลังกายประเภท Body Weight เพื่อช่วยสร้างกล้ามเนื้อร่างกาย")
     elif urproblem1.count("ออก") or urproblem1.count("EXIT"): #ออกจากโปรแกรมน้ำหนัก
         return main()
     else:
@@ -61,4 +61,15 @@ def weight():
             return main()
         else:
             return weight()
+def spfix():
+    spfixpro = input("โปรดระบุแบรนด์มือถือที่ท่านใช้งาน(เป็นภาษาอังกฤษ): ")
+    spfixprolo = spfixpro.lower()
+    if spfixprolo.count("xiaomi") or spfixprolo.count("redmi") or spfixprolo.count("mi"):
+        miprob = input("โปรดระบุปัญหาที่ท่านพบเจอ เช่น เครื่องช้า เปิดไม่ติด bootloop เป็นต้น")
+    elif spfixprolo.count("samsung"):
+        samprob = input("โปรดระบุปัญหาที่ท่านพบเจอ เช่น เครื่องช้า เปิดไม่ติด เป็นต้น")
+    elif spfixprolo.count("huawei") or spfixprolo.count("honor"):
+        huawprob = input("โปรดระบุปัญหาที่ท่านพบเจอ เช่น เครื่องช้า เปิดไม่ติด เป็นต้น")
+    else:
+        otherbrand = input("ไม่พบแบรนด์ที่ท่าระบุมา โปรดระบุปัญหาที่ท่านพบเจอ เช่น เครื่องช้า เป็นต้น")
 main()
